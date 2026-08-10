@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/03 21:31:41 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/03 21:31:41 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
 
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	i = 0;
-	while (c[i] != '\0')
+	while (i < n)
 	{
+		d[i] = s[i];
 		i++;
 	}
-	return (i);
+	return (d);
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	char src[] = "HAHAHA";
+	char dst[6] = "";
+	size_t n = 5;
+	ft_memcpy(dst,src,n);
+	printf("dst = %s\n", dst);
 	return 0;
 }
 */

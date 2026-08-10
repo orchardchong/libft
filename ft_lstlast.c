@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/09 22:21:52 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/09 22:21:52 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	i;
-
-	i = 0;
-	while (c[i] != '\0')
+	if(lst == NULL)
+		return (NULL);
+	while(lst->next != NULL)
 	{
-		i++;
+		lst = lst->next;
 	}
-	return (i);
+	return (lst);
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	t_list *word1 = ft_lstnew("hello");
+	t_list *word2 = ft_lstnew("bye");
+
+	word1->next = word2;
+	t_list *lastnode = ft_lstlast(word1);
+	printf("the last word is %s\n", (char *)lastnode->content);
 	return 0;
-}
-*/
+}*/

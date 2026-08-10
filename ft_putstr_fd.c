@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/08 16:49:49 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/08 16:49:49 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
-	while (c[i] != '\0')
+	while (s[i])
 	{
+		write (fd, &s[i], 1);
 		i++;
 	}
-	return (i);
 }
 
-/*#include <stdio.h>
-int	main(void)
+/*int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	char s[] = "Hello";
+	int	fd = 1;
+	ft_putstr_fd(s,fd);
+	ft_putstr_fd("\n",fd);
 	return 0;
 }
 */

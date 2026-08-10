@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/10 01:59:38 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/10 01:59:38 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-
-	i = 0;
-	while (c[i] != '\0')
+	if (lst == NULL || f == NULL)
+		return;
+	while (lst != NULL)
 	{
-		i++;
+		f(lst -> content);
+		lst = lst->next;
 	}
-	return (i);
 }
 
 /*#include <stdio.h>
+void	print_tool(void *content)
+{
+	printf("The Inspector sees: %s\n", (char *)content);
+}
+
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
-	return 0;
-}
-*/
+	t_list *node1 = ft_lstnew("hello");
+	t_list *node2 = ft_lstnew("bye");
+	node1 -> next = node2;
+	ft_lstiter(node1,print_tool);
+	 return 0;
+}*/

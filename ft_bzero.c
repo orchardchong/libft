@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/03 18:31:22 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/03 18:31:22 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t			i;
+	unsigned char	*ptr;
 
 	i = 0;
-	while (c[i] != '\0')
+	ptr = (unsigned char *)s;
+	while (i < n)
 	{
+		ptr [i] = 0;
 		i++;
 	}
-	return (i);
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	char s[] = "heeheehee";
+	size_t n = 6;
+	ft_bzero(s,n);
+	printf("the word become: %s\n", s);
 	return 0;
-}
-*/
+}*/

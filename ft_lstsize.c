@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/09 20:36:28 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/09 20:36:28 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	while (c[i] != '\0')
+	count = 0;
+	while (lst)
 	{
-		i++;
+		count++;
+		lst = lst->next;
 	}
-	return (i);
+	return (count);
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	t_list *node1 = ft_lstnew("World");
+	t_list *node2 = ft_lstnew("Hello");
+
+	node1->next = node2;
+	int	total_node = ft_lstsize(node1);
+	printf("You have total : %d node \n", total_node);
 	return 0;
-}
-*/
+}*/

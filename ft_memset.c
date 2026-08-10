@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/01 16:30:43 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/01 16:30:43 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	unsigned char	*ptr;
+	size_t			i;
 
 	i = 0;
-	while (c[i] != '\0')
+	ptr = (unsigned char *) s;
+	while (i < n)
 	{
+		ptr [i] = (unsigned char)c;
 		i++;
 	}
-	return (i);
+	return (ptr);
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	char s[] = "heeheehee";
+	int	c = '.';
+	size_t n = 6;
+	ft_memset(s,c,n);
+	printf("the word become: %s\n", s);
 	return 0;
 }
 */

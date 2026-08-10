@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/09 23:14:24 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/09 23:14:24 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	while (c[i] != '\0')
+	t_list *tmp;
+	if (*lst == NULL || new == NULL)
+		return;
+	if (*lst == NULL)
 	{
-		i++;
+		*lst = new;
+		return;
 	}
-	return (i);
+	tmp = *lst;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = new;
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	t_list *node1 = ft_lstnew("hello");
+	t_list *node2 = ft_lstnew("bye");
+	ft_lstadd_back(&node1,node2);
+	printf("Node1 word is : %s\n", (char *)node1->content);
+	printf("the word folliwng with Node1 is : %s\n", (char *)node1->next->content);
 	return 0;
 }
 */

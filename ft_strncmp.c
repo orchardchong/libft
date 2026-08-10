@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/07/28 00:07:55 by ochong            #+#    #+#             */
+/*   Updated: 2026/07/28 00:07:55 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (c[i] != '\0')
+	while ((s1[i] != '\0' && s1[i] == s2[i]) && i < n)
 	{
 		i++;
 	}
-	return (i);
+	if (i == n)
+		return (0);
+	return (s1[i] - s2[i]);
 }
 
 /*#include <stdio.h>
-int	main(void)
+#include <string.h>
+int main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
-	return 0;
+    char s1[] = "hello";
+    char s2[] = "hell";
+    size_t n = ;
+    printf("Different = %d\n", ft_strncmp(s1,s2,n));
+    printf("Different = %d\n", strncmp(s1,s2,n));
+    return 0;
 }
 */

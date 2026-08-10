@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/04 14:50:04 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/04 14:50:04 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	i;
+	size_t				i;
+	const unsigned char	*str;
 
 	i = 0;
-	while (c[i] != '\0')
+	str = (const unsigned char *)s;
+	while (i < n)
 	{
+		if ((unsigned char) str[i] == (unsigned char) c)
+		{
+			return ((void *)&str[i]);
+		}
 		i++;
 	}
-	return (i);
+	return (NULL);
 }
 
-/*#include <stdio.h>
-int	main(void)
+/*int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	char	s[] = "Hi Elyn";
+	int	c = 'E';
+	size_t	n = 7;
+	printf("the word you found is: %s\n", (char *)ft_memchr(s,c,n));
 	return 0;
-}
-*/
+}*/

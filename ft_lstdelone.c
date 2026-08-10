@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/27 18:08:18 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/27 18:19:41 by ochong           ###   ########.fr       */
+/*   Created: 2026/08/10 00:31:02 by ochong            #+#    #+#             */
+/*   Updated: 2026/08/10 00:31:02 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	int	i;
+	if (!lst || !del)
+		return;
+	del(lst -> content);
+	free(lst);
+}
 
-	i = 0;
-	while (c[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+void	del (void * content)
+{
+	(void)content;
 }
 
 /*#include <stdio.h>
 int	main(void)
 {
-	char c[] = "hello";
-	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	t_list *node1 = ft_lstnew("hello");
+	t_list *node2 = ft_lstnew("bye");
+	node1 -> next = node2;
+	printf("the nodes appear are : %s ,  %s\n",(char *)node1 ->content, (char *)node1 -> next -> content);
+	ft_lstdelone(node2,del);
+	node1 -> next = NULL;
+	printf("the only node appear is : %s\n", (char *)node1 ->content);
 	return 0;
-}
-*/
+}*/
