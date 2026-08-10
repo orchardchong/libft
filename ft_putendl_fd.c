@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 17:01:02 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/08 17:01:02 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:36:22 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,11 @@ void	ft_putendl_fd(char *s, int fd)
 	write (fd, "\n", 1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	s[] = "hello";
 	int	fd = 1;
 	ft_putendl_fd(s, fd);
 	return 0;
 }
+*/

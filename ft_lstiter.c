@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 01:59:38 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/10 01:59:38 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 21:42:51 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst == NULL || f == NULL)
-		return;
+		return ;
 	while (lst != NULL)
 	{
 		f(lst -> content);

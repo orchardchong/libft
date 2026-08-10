@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 23:14:24 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/09 23:14:24 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 21:35:59 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *tmp;
+	t_list	*tmp;
+
 	if (*lst == NULL || new == NULL)
-		return;
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	tmp = *lst;
 	while (tmp->next != NULL)
@@ -35,7 +36,8 @@ int	main(void)
 	t_list *node2 = ft_lstnew("bye");
 	ft_lstadd_back(&node1,node2);
 	printf("Node1 word is : %s\n", (char *)node1->content);
-	printf("the word folliwng with Node1 is : %s\n", (char *)node1->next->content);
+	printf("the word folliwng with Node1 is : %s\n", (char *)
+	node1->next->content);
 	return 0;
 }
 */

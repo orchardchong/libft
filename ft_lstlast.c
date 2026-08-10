@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 22:21:52 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/09 22:21:52 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:46:22 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if(lst == NULL)
+	if (lst == NULL)
 		return (NULL);
-	while(lst->next != NULL)
+	while (lst->next != NULL)
 	{
 		lst = lst->next;
 	}

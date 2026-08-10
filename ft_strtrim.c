@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 23:14:51 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/06 23:14:51 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 21:45:43 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	if (s1 == NULL || set == NULL)
 		return (NULL);
-	while (s1[start] && ft_strchr(set,s1[start]))
+	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
 	end = ft_strlen(s1);
-	while (end > start && ft_strchr(set,s1[end - 1]))
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	ptr = (char *)malloc((end - start) + 1);
 	if (ptr == NULL)
-		return NULL;
+		return (NULL);
 	i = 0;
 	while (start < end)
 	{
@@ -39,11 +39,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	ptr[i] = '\0';
 	return (ptr);
-
-
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	// Test 1: Normal behavior
@@ -63,3 +61,4 @@ int main(void)
 
 	return (0);
 }
+*/

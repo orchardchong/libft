@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 01:17:19 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/10 01:17:19 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 21:38:23 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*tmp;
 
 	if (lst == NULL || del == NULL)
-		return;
+		return ;
 	while (*lst != NULL)
 	{
-		tmp = (*lst) -> next;	
-		del((*lst) -> content);
+		tmp = (*lst)->next;
+		del((*lst)->content);
 		free(*lst);
 		*lst = tmp;
 	}

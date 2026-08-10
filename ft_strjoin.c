@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 21:20:35 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/06 21:20:35 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:12:33 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (ptr == NULL)
 		return (NULL);
-	while(s1[i] != '\0')
+	while (s1[i] != '\0')
 	{
 		ptr[i] = s1[i];
 		i++;
 	}
-	while(s2[j])
+	while (s2[j])
 	{
 		ptr[i] = s2[j];
 		i++;
@@ -40,7 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (ptr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	char	s1[] = "";
@@ -57,3 +57,4 @@ int	main(void)
 	}
 	return 0;
 }
+*/

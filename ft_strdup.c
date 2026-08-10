@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 18:31:15 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/05 18:31:15 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:13:35 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strdup(const char *s)
 	return (ptr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	char s[] = "hi";
@@ -53,3 +53,4 @@ int	main(void)
 		printf("this memory is full");
 	return 0;
 }
+*/

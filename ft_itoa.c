@@ -6,13 +6,13 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 22:17:14 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/07 22:17:14 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 21:33:07 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	counting_word(int s)
+static int	counting_word(int s)
 {
 	int	box;
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	char *result;
@@ -83,3 +83,4 @@ int main(void)
 	free(result);
 	return (0);
 }
+*/

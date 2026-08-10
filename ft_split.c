@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 17:30:47 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/07 17:30:47 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:32:28 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	*free_memory(char **arr, int nword)
 char	*build_word(char const *s, int start, int len)
 {
 	char	*word;
-	int	i;
+	int		i;
 
 	word = (char *)malloc((len + 1) * sizeof(char));
 	if (!word)
@@ -64,18 +64,12 @@ char	*build_word(char const *s, int start, int len)
 	return (word);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**fill_arr(char **arr, char const *s, char c)
 {
-	char	**arr;
 	int	i;
 	int	box;
 	int	start;
 
-	if (!s)
-		return (NULL);
-	arr = (char **)malloc((count_word(s, c) + 1) * sizeof(char *));
-	if (!arr)
-		return (NULL);
 	i = 0;
 	box = 0;
 	while (s[i])
@@ -83,20 +77,32 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		if (!s[i])
-			break;
+			break ;
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
 		arr[box] = build_word(s, start, i - start);
-		 if (!arr[box])
+		if (!arr[box])
 			return (free_memory(arr, box));
 		box++;
 	}
 	arr[box] = NULL;
 	return (arr);
 }
-		
-#include <stdio.h>
+
+char	**ft_split(char const *s, char c)
+{
+	char	**arr;
+
+	if (!s)
+		return (NULL);
+	arr = (char **)malloc((count_word(s, c) + 1) * sizeof(char *));
+	if (!arr)
+		return (NULL);
+	return (fill_arr(arr, s, c));
+}
+
+/*#include <stdio.h>
 
 int main(void)
 {
@@ -123,4 +129,4 @@ int main(void)
 	}
 	free(result);
 	return (0);
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 18:27:34 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/09 18:27:34 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:42:36 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list *node;
+	t_list	*node;
+
 	node = malloc (sizeof(t_list));
 	if (node == NULL)
 		return (NULL);

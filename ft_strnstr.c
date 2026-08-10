@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/30 23:58:41 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/30 23:58:41 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:10:24 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strnstr(const char *s, const char *c, size_t size)
 	return (NULL);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	const char s[] = "Hello, my name is Alex";
@@ -54,3 +54,4 @@ int	main(void)
 	printf("The word you find is %s\n", ft_strnstr(s,c,size));
 	return 0;
 }
+*/

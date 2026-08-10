@@ -6,23 +6,24 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 01:41:38 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/08 01:41:38 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:08:22 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char	upper(unsigned int i, char c)
+/*char	upper(unsigned int i, char c)
 {
 	(void)i;
 	if (c >= 'a' && c <= 'z')
 		c = c - 32;
 	return (c);
 }
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char			*ptr;
 	unsigned int	i;
-	char	*ptr;
 
 	i = 0;
 	if (!s || !f)
@@ -39,7 +40,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (ptr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	char	c[] = "hello i am Orchard";
@@ -55,3 +56,4 @@ int main(void)
 	free(result);
 	return (0);
 }
+*/

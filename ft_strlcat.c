@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 23:21:00 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/28 23:21:00 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:16:47 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (dlength + slength);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	char dst[10] = "hello";
@@ -47,3 +47,4 @@ int	main(void)
 	printf("dst = %ld\n", ft_strlcat(dst,src,size));
 	return 0;
 }
+*/

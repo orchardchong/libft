@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/28 21:23:51 by ochong            #+#    #+#             */
-/*   Updated: 2026/07/28 21:23:51 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:11:13 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	return (length);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
 	char des[] = "";
@@ -44,4 +44,4 @@ int main(void)
 	printf("The text inside the destination is: %s\n", des);
 	return(0);
 }
-
+*/

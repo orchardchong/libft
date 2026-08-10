@@ -6,7 +6,7 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 17:10:13 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/08 17:10:13 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 22:35:29 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n == -2147483648)
 	{
 		write (fd, "-2147483648", 11);
-		return;
+		return ;
 	}
 	if (n < 0)
 	{
@@ -26,8 +26,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n > 9)
 	{
-		ft_putnbr_fd(n / 10 , fd);
-		ft_putnbr_fd(n % 10 , fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 	{
@@ -35,7 +35,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-int main(void)
+/*int main(void)
 {
 	// Test 1: Zero
 	write(1, "Zero (0): ", 10);
@@ -73,3 +73,4 @@ int main(void)
 	ft_putchar_fd('\n', 1);
 	return (0);
 }
+*/

@@ -6,11 +6,12 @@
 /*   By: ochong <ochong@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 23:56:44 by ochong            #+#    #+#             */
-/*   Updated: 2026/08/04 23:56:44 by ochong           ###   ########.fr       */
+/*   Updated: 2026/08/10 21:27:35 by ochong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_calloc(size_t n, size_t size)
 {
 	size_t	totalmemory;
@@ -18,19 +19,18 @@ void	*ft_calloc(size_t n, size_t size)
 
 	totalmemory = n * size;
 	ptr = malloc(totalmemory);
-
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
 	else
 	{
-		ft_bzero(ptr,totalmemory);
+		ft_bzero(ptr, totalmemory);
 	}
 	return (ptr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	size_t n = 5;
@@ -48,3 +48,4 @@ int	main(void)
 	}
 	return 0;
 }
+*/
