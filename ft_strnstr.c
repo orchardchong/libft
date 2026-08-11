@@ -18,29 +18,30 @@
 // small string
 #include "libft.h"
 
-char	*ft_strnstr(const char *s, const char *c, size_t size)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	is;
-	size_t	jc;
+	size_t	ibig;
+	size_t	jlittle;
 
-	is = 0;
-	jc = 0;
-	if (c[jc] == '\0')
+	ibig = 0;
+	jlittle = 0;
+	if (little[jlittle] == '\0')
 	{
-		return ((char *)s);
+		return ((char *)big);
 	}
-	while (s[is] != '\0' && is < size)
+	while (ibig < len && big[ibig] != '\0')
 	{
-		jc = 0;
-		while ((is + jc) < size && c[jc] != '\0' && s[is + jc] == c[jc])
+		jlittle = 0;
+		while ((ibig + jlittle) < len && little[jlittle] != '\0'
+			&& big[ibig + jlittle] == little[jlittle])
 		{
-			jc++;
+			jlittle++;
 		}
-		if (c[jc] == '\0')
+		if (little[jlittle] == '\0')
 		{
-			return ((char *)&s[is]);
+			return ((char *)&big[ibig]);
 		}
-		is++;
+		ibig++;
 	}
 	return (NULL);
 }
@@ -53,5 +54,4 @@ int	main(void)
 	size_t size = 22;
 	printf("The word you find is %s\n", ft_strnstr(s,c,size));
 	return 0;
-}
-*/
+}*/

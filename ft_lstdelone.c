@@ -20,10 +20,10 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 
-void	del(void *content)
+/*void	del(void *content)
 {
 	(void)content;
-}
+}*/
 
 /*#include <stdio.h>
 int	main(void)

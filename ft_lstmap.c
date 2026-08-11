@@ -23,7 +23,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	newlist = NULL;
 	while (lst)
 	{
-		newcontent = f(lst -> content);
+		newcontent = f(lst->content);
 		newnode = ft_lstnew(newcontent);
 		if (newnode == NULL)
 		{
@@ -37,7 +37,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (newlist);
 }
 
-void	*modify_content(void *content)
+/*void	*modify_content(void *content)
 {
 	char	*original;
 	char	*new_str;
@@ -62,7 +62,7 @@ void	*modify_content(void *content)
 void	del(void *content)
 {
 	free(content);
-}
+}*/
 
 /*#include <stdio.h>
 int main(void)

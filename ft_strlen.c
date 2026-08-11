@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//it has been change to const because ft_strdup need it (pls clarify)
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
 	int	i;
 
@@ -30,7 +29,6 @@ int	main(void)
 {
 	char c[] = "hello";
 	ft_strlen(c);
-	printf("Ans = %d\n", ft_strlen(c));
+	printf("Ans = %zu\n", ft_strlen(c));
 	return 0;
-}
-*/
+}*/

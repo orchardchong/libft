@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	count_word(char const *s, char c)
+static int	count_word(char const *s, char c)
 {
 	int	count;
 	int	i;
@@ -35,7 +35,7 @@ int	count_word(char const *s, char c)
 	return (count);
 }
 
-void	*free_memory(char **arr, int nword)
+static void	*free_memory(char **arr, int nword)
 {
 	while (nword > 0)
 	{
@@ -46,7 +46,7 @@ void	*free_memory(char **arr, int nword)
 	return (NULL);
 }
 
-char	*build_word(char const *s, int start, int len)
+static char	*build_word(char const *s, int start, int len)
 {
 	char	*word;
 	int		i;
