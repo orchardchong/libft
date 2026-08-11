@@ -41,9 +41,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*#include <stdio.h>
 int	main(void)
 {
-	char s[] = "";
-	unsigned int start = 2;
-	size_t len = 4;
+	char s[] = "Happy";
+	unsigned int start = 1;
+	size_t len = 3;
 	char *myarray = ft_substr(s,start,len);
 	if (myarray != NULL)
 	{

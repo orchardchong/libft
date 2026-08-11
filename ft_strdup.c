@@ -19,9 +19,9 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	i = 0;
-	length = ft_strlen(s);
 	if (s == NULL)
 		return (NULL);
+	length = ft_strlen(s);
 	ptr = (char *)malloc(length + 1);
 	if (ptr == NULL)
 	{
@@ -46,7 +46,7 @@ int	main(void)
 	char *myarray = ft_strdup(s);
 	if (myarray != NULL)
 	{
-		printf("This memory has the word '%s' \n !", myarray);
+		printf("You can edit the word '%s' \n !", myarray);
 		free(myarray);
 	}
 	else
