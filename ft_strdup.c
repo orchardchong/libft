@@ -27,15 +27,12 @@ char	*ft_strdup(const char *s)
 	{
 		return (NULL);
 	}
-	else
+	while (i < length)
 	{
-		while (i < length)
-		{
-			ptr[i] = s[i];
-			i++;
-		}
-		ptr[i] = '\0';
+		ptr[i] = s[i];
+		i++;
 	}
+	ptr[i] = '\0';
 	return (ptr);
 }
 

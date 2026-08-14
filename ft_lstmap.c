@@ -58,7 +58,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return ((void *)new_str);
 }
 
-// 2. The 'del' function: Frees dynamically allocated content
 void	del(void *content)
 {
 	free(content);
