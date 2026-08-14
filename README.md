@@ -23,7 +23,7 @@ Clear all object files and libft.a:
 * https://www.educative.io/
 * https://pythontutor.com/
 * AI usage: 
-Using AI is mainly helping me to explain what is the functions for, and what does each line of the code mean.
+Using AI is mainly helping me to explain what is the function and the purpose for.
 
 ### Functions
 
