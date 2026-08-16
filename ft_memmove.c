@@ -14,18 +14,16 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*d;
-	const unsigned char	*s;
-	size_t				i;
+	size_t	i;
 
-	d = (unsigned char *)dest;
-	s = (const unsigned char *)src;
-	if (d > s)
+	if (!dest && !src)
+		return (NULL);
+	if (dest > src)
 	{
 		while (n > 0)
 		{
 			n--;
-			d[n] = s[n];
+			((char *)dest)[n] = ((const char *)src)[n];
 		}
 	}
 	else
@@ -33,20 +31,20 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = 0;
 		while (i < n)
 		{
-			d[i] = s[i];
+			((char *)dest)[i] = ((const char *)src)[i];
 			i++;
 		}
 	}
-	return (d);
+	return (dest);
 }
 
-/*#include <stdio.h
+/*#include <stdio.h>
 int	main(void)
 {
 	char dest[] = "hello";
 	ft_memmove(dest + 1,dest,5);
 	printf("after moving is: %s\n", dest);
 	return 0;
-}
-i > n or i < n is based on whether your + 1 is at dst or src in
-the main function */
+}*/
+//n > 0 or i < n is based on whether your + 1 is at dst or src in
+//the main function 

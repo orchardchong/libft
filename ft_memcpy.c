@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s;
 	size_t				i;
 
+	if (!dest && !src)
+		return (NULL);
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
 	i = 0;
@@ -32,11 +34,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 /*#include <stdio.h>
 int	main(void)
 {
-	char src[] = "HAHAHA";
-	char dst[6] = "";
+	char src[] = "\0";
+	char dst[6] = "\0";
 	size_t n = 5;
 	ft_memcpy(dst,src,n);
 	printf("dst = %s\n", dst);
 	return 0;
-}
-*/
+}*/

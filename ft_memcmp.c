@@ -25,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		i++;
 	}
-	if (n == 0)
+	if (i == n)
 		return (0);
 	return (str1[i] - str2[i]);
 }
@@ -33,10 +33,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 /*#include <stdio.h>
 int	main(void)
 {
-	char s1[] = "hehehA";
+	char s1[] = "heheha";
 	char s2[] = "heheha";
-	size_t n = 8;
+	size_t n = 6;
 	printf("the difference is %d\n", ft_memcmp(s1,s2,n));
 	return 0;
-}
-*/
+}*/

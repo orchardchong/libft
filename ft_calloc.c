@@ -18,6 +18,8 @@ void	*ft_calloc(size_t n, size_t size)
 	char	*ptr;
 
 	totalmemory = n * size;
+	if (size != 0 && (totalmemory / size) != n)
+		return (NULL);
 	ptr = malloc(totalmemory);
 	if (ptr == NULL)
 	{
@@ -34,7 +36,7 @@ void	*ft_calloc(size_t n, size_t size)
 int	main(void)
 {
 	size_t n = 5;
-	size_t size = 4;
+	size_t size = 2147483646;
 	int	*myarray = (int *)ft_calloc(n,size);
 	if (myarray != NULL)
 	{
@@ -47,5 +49,7 @@ int	main(void)
 		printf("Fail! The Boss gave us NULL (no memory).\n");
 	}
 	return 0;
-}
-*/
+}*/
+//if someone ask for 100 blocks of memory, and each block is 5 bytes large. 
+// The computer cannot hold 500. It hits 255, rolls over to 0, and keeps
+//counting. In the computer's memory, 500 actually becomes 244.

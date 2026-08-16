@@ -19,8 +19,8 @@ t_list	*ft_lstnew(void *content)
 	node = malloc (sizeof(t_list));
 	if (node == NULL)
 		return (NULL);
-	node -> content = content;
-	node -> next = (NULL);
+	node->content = content;
+	node->next = (NULL);
 	return (node);
 }
 
@@ -40,5 +40,4 @@ int	main(void)
 	
 	free(node1);
 	return 0;
-}
-*/
+}*/
